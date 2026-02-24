@@ -1,4 +1,4 @@
-// C++ program for the implementation of merge sort
+          // C++ program for the implementation of merge sort
 #include <iostream>
 #include <vector>
 
