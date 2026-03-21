@@ -1,3 +1,6 @@
+
+// find  occurrance of a number in an array
+
 #include <iostream>
 using namespace std;
 
