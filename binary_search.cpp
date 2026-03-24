@@ -13,7 +13,6 @@ int main (){
    int target ;
  cout << "enter target";
  cin >> target;
-
   int start =0, end = n-1 , first=-1, last =-1, mid ;
     while(start<= end){
         mid = start + (end-start)/2;
@@ -41,6 +40,6 @@ int main (){
          end = mid -1;
     } 
     cout << "first position " <<first<<endl;
-    cout << "last position " << last<<endl;
+   cout << "last position " << last<<endl;
     return 0 ;
 }
