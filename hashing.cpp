@@ -1,9 +1,10 @@
 //hashing -----pre storing /fetching
-
+// for hashing arr[10^6] -----inside main function 
+// arr[10^7]------globally 
 #include<iostream>
 using namespace std;
 int main (){
-int n ;
+/*int n ;
 cout<<"enter array element";
 cin >>n;
 int arr[n];
@@ -24,5 +25,24 @@ while (query--){
 //    fetch 
 cout <<hash[num] <<endl;
 }
+*/
+string A ;
+cout<< "enter string";
+cin >> A;
+// pre computing 
+int hash[26]={0};
+for (int i=0;i<A.size();i++){
+hash[A[i]-'a']++;
+}
+int query;
+cout << "enetr query";
+cin >> query;
+while (query--){
+    char c ;
+    cin >> c;
+    //fertch
+    cout << hash[c-'a'] <<  endl;
+}
+
 return 0;
 }
