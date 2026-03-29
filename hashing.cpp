@@ -29,10 +29,10 @@ cout <<hash[num] <<endl;
 string A ;
 cout<< "enter string";
 cin >> A;
-// pre computing 
+// pre compute
 int hash[26]={0};
 for (int i=0;i<A.size();i++){
-hash[A[i]-'a']++;
+hash[A[i]-'a']++;  //A[i]-'a'---->is used to get the index 
 }
 int query;
 cout << "enetr query";
@@ -41,7 +41,7 @@ while (query--){
     char c ;
     cin >> c;
     //fertch
-    cout << hash[c-'a'] <<  endl;
+    cout << hash[c-'a'] <<  endl;    //[c-'a]--->is used to get the index
 }
 
 return 0;
