@@ -30,7 +30,7 @@ for (int i=0;i<n;i++){
     }
 }
  cout<< second_largest<<endl;
- */
+ 
 // check if the array is sorted or not 
 for(int i =1;i<n;i++){
     if(arr[i]>=arr[i-1]){   
@@ -40,5 +40,15 @@ for(int i =1;i<n;i++){
     }
 }
  cout << "array is sorted"<< endl;
+ */
+//remove duplicate from array 
+int i=0;
+for (int j=1;j<n;j++){
+    if (arr[i]!=arr[j]){
+        arr[i+1]=arr[j];
+        i++;
+    }
+}
+cout << i+1 <<endl;
 return 0;
 }
