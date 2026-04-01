@@ -84,7 +84,7 @@ for (int j=0;j<m;j++){
     cin >> arr2[j];
 }
 
-   int i=0,j=0;
+   /*int i=0,j=0;
    vector<int>unionArr;
    while(i<n && j<m){
     if(arr[i] <=arr[j]){
@@ -113,7 +113,24 @@ for (int j=0;j<m;j++){
       i++; }
    for (int i=0;i<unionArr.size();i++){
     cout<<unionArr[i] << " ";
-   }
+   }*/
+  int i=0,j=0;
+  vector<int>answer;
+  while(i<n && j<m){
+    if(arr[i]<arr2[j]){
+        i++;
+    }
+    else{
+        if(arr[i]==arr2[j]){
+            answer.push_back(arr[i]);
+        }
+        i++;
+        j++;
+    }
+  }
+  for (int i=0;i<answer.size();i++){
+    cout << answer[i]<<" ";
+  }
 
 return 0;
 }
