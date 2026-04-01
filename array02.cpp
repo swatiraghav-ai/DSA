@@ -19,7 +19,7 @@ arr[n-1]=temp;
 for (int i=0;i<n;i++){
     cout<< arr[i]<<endl;
 }
-    */
+    
    int d ;
    cout <<"enetr d";
    cin >> d;
@@ -37,6 +37,25 @@ for(int i=n-d;i<n;i++){
 for (int i=0;i<n;i++){
     cout<< arr[i] << endl;
 }
+   */
+
+   // move all zeros to the end of the array
+   int j =-1;
+   for (int i=0;i<n;i++){
+    if(arr[i]==0){
+        j=i;
+        break;
+    }
+   }
+   for (int i =j+1;i<n;i++){
+    if(arr[i]!=0){
+        swap(arr[i],arr[j]);
+        j++;
+    }
+}
+    for (int i=0;i<n;i++){
+cout << arr[i] << " " ;
+    }
    
 return 0;
 }
