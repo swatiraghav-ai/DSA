@@ -23,8 +23,8 @@ for (int i=0;i<n;i++){
 
 }
 cout << "missing number " << asspectedsum - arraysum;
-*/
 
+// ANOTHER APPROACH TO FIND MISSING NUMBER ---this is the most optimal solution 
 int xor1=0,xor2=0;
 for (int i =0;i<n;i++){
     xor2 ^= arr[i];
@@ -32,5 +32,19 @@ for (int i =0;i<n;i++){
 }
 xor1^=(n +1);
 cout << "missing number "<< (xor1 ^ xor2) << endl;
+*/
+// maximum consective ones 
+int count =0,maximum=0;
+for (int i=0;i<n;i++){
+    if(arr[i]==1){
+        count ++;
+        maximum=max(maximum,count);
+    }
+    else {
+        count =0;
+    }
+}
+cout << maximum << endl; 
+
 return 0;
 }
