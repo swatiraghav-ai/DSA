@@ -114,6 +114,7 @@ for (int j=0;j<m;j++){
    for (int i=0;i<unionArr.size();i++){
     cout<<unionArr[i] << " ";
    }*/
+  //intersection of two sorted array
   int i=0,j=0;
   vector<int>answer;
   while(i<n && j<m){
