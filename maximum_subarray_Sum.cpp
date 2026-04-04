@@ -1,4 +1,4 @@
-// total number of subarray = n*(n+1)/2
+       // total number of subarray = n*(n+1)/2
 #include<iostream>
 #include<climits>
 using namespace std;
