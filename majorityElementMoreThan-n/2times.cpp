@@ -12,7 +12,10 @@ int main (){
     }
     int count =0;
     int element;
-    for (int i=0;i<n;i++){
+    for (int i=0;i<n;i++){  //The first loop (Boyer-Moore algorithm) identifies a candidate for the majority element (appearing > n/2 times)
+                            //, but doesn't guarantee it exists or meets the threshold.
+
+
         if(count ==0){
             count=1;
             element =arr[i];
@@ -25,7 +28,10 @@ int main (){
             count--;
         }
     }
-    int count1=0;
+    int count1=0;         //The second loop verifies by counting the candidate's occurrences.
+                           // If it exceeds n/2, it's confirmed as majority; 
+                           //otherwise, no majority element exists (code silently ends without output).
+                           // This verification is essential because Boyer-Moore can produce false positives when no majority element is present
     for(int i=0;i<n;i++){
         if(arr[i]==element){
             count1++;
