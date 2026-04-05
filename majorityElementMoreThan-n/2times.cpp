@@ -25,6 +25,15 @@ int main (){
             count--;
         }
     }
-    cout << element << endl;
+    int count1=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]==element){
+            count1++;
+        }
+        if(count1 >n/2){
+            cout << element<< endl;
+            break;
+        }
+    }
     return 0;
 }
