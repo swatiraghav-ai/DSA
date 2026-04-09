@@ -1,4 +1,4 @@
-//hashing -----pre storing /fetching
+//hashing -----pre storing /fetchingb 
 // for hashing arr[10^6] -----inside main function 
 // arr[10^7]------globally 
 #include<iostream>
