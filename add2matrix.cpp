@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    int rows, cols;
+    int rows, cols; 
 
     cout << "Enter number of rows: ";
     cin >> rows;
