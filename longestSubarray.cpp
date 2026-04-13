@@ -1,4 +1,4 @@
-// longest subarray with sum k (for non-negative values by sliding window, no vector)
+  // longest subarray with sum k (for non-negative values by sliding window, no vector)
 #include <iostream>
 using namespace std;
 
