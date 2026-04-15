@@ -42,6 +42,6 @@ left++;
     for(int i=0;i<sprial.size();i++){
    cout<<sprial[i]<<" ";
 }
-cout << endl;
+
     return 0 ;
 }
