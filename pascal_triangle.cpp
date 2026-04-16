@@ -31,11 +31,12 @@ int main() {
    cout <<"enter roe number :";
    cin >> n;
    int ans =1;
-  // cout << ans<< " ";
+   cout << ans<< " ";
    for (int i=1;i<n;i++){
     ans=ans* (n-i);
     ans=ans/i;
     cout << ans<< " ";
-   }
+}
+   
     return 0;
 }
