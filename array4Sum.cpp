@@ -2,7 +2,7 @@
 #include <vector>
 #include<algorithm>
 using namespace std ;
-int main (){ 
+int main (){  
     int n ;
  cout<< "enter array size";
  cin >> n;
@@ -22,7 +22,7 @@ int main (){
     int k=n-1;
     int l=j+1;
     while(l<k){
-    int sum =arr[i]+arr[j]+arr[k]+arr[l];
+    int sum =arr[i]+arr[j]+arr[k]+arr[l]; 
     if(sum <target){
 j++;
     }

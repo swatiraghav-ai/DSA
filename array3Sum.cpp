@@ -9,7 +9,7 @@ int main (){
  int arr[n];
  cout<< "enter elements";
  for(int i =0;i<n;i++){
-    cin>>arr[i];
+    cin>>arr[i]; 
  }
 vector<vector<int>>ans;
 sort(arr,arr +n);
