@@ -1,61 +1,77 @@
-#include <iostream>
-using namespace std;
-int cnt=0;
-// Merge function
-void merge(int arr[], int low, int mid, int high) {
-    int n1 = mid - low + 1;
-    int n2 = high - mid;
+int cnt =0; // global variable
 
-    int left[n1], right[n2];
+// Function to merge two sorted halves
+void merge(int arr[], int low, int mid, int high)
+{
+    int temp[high - low + 1]; // Temporary array
+    int left = low;           // Starting index of left half
+    int right = mid + 1;      // Starting index of right half
+    int k = 0;                // Index for temp array
 
-    // Copy data
-    for (int i = 0; i < n1; i++)
-        left[i] = arr[low + i];
-    for (int j = 0; j < n2; j++)
-        right[j] = arr[mid + 1 + j];
-
-    int i = 0, j = 0, k = low;
-
-    // Merge two sorted arrays
-    while (i < n1 && j < n2) {
-        if (left[i] <= right[j]) {
-            arr[k] = left[i];
-            i++;
-        } else {
-            arr[k] = right[j];
-            cnt+=(n1 -i);
-            j++;
+    // Compare elements from both halves
+    while (left <= mid && right <= high)
+    {
+        if (arr[left] <= arr[right])
+        {
+            temp[k] = arr[left];
+            left++;
+        }
+        else
+        {
+            temp[k] = arr[right];
+            cnt += (mid-left +1);
+            right++;
         }
         k++;
     }
 
-    // Remaining elements
-    while (i < n1) {
-        arr[k] = left[i];
-        i++;
+    // Copy remaining elements of left half
+    while (left <= mid)
+    {
+        temp[k] = arr[left];
+        left++;
         k++;
     }
 
-    while (j < n2) {
-        arr[k] = right[j];
-        j++;
+    // Copy remaining elements of right half
+    while (right <= high)
+    {
+        temp[k] = arr[right];
+        right++;
         k++;
+    }
+
+    // Copy temp array back to original array
+    for (int i = low; i <= high; i++)
+    {
+        arr[i] = temp[i - low];
     }
 }
 
 // Merge Sort function
-void mergeSort(int arr[], int low, int high) {
-    if (low < high) {
-        int mid = low + (high - low) / 2;
+void mergeSort(int arr[], int low, int high)
+{
+    // Base case
+    if (low >= high)
+        return;
 
-        mergeSort(arr, low, mid);
-        mergeSort(arr, mid + 1, high);
+    // Find middle element
+    int mid = (low + high) / 2;
 
-        merge(arr, low, mid, high);
-    }
+    // Sort left half
+    mergeSort(arr, low, mid);
+
+    // Sort right half
+    mergeSort(arr, mid + 1, high);
+
+    // Merge the sorted halves
+    merge(arr, low, mid, high);
 }
 
+
 // Main function
+#include <iostream>
+using namespace std;
 int main() {
     int n;
     cout<<"enter array size";
